@@ -1,0 +1,67 @@
+body {
+    background-color: aquamarine;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+button{
+    font-size: large;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    border-radius: 50%;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: min(90%, 500px);
+    border: 1px solid white;
+    border-radius: 10%;
+    background-color: salmon;
+
+}
+    #screenContainer{
+        padding: 2em;
+        width: 75%;
+        flex: 1 1 auto;
+        
+    }
+        #display{
+            font-size: 50pt;
+            text-align: right;
+            color: azure;
+            background-color: black;
+            border: 3px solid gray;
+            border-radius: 5%;
+            padding: 1rem;
+        }
+
+    #keypad{
+        display: flex;
+        flex-direction: column;
+    }
+        #functions{
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        #numOpContainer{
+            display: flex;
+        }
+            #numbers{
+                display: flex;
+                flex-direction: column;
+            }
+            #operators{
+                display: flex;
+                flex-direction: column;
+            }
+    
