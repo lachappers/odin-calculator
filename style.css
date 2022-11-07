@@ -10,7 +10,7 @@ body {
 
 button{
     font-size: 24px;
-    padding: 20px;
+    padding: 1rem;
     text-align: center;
     text-decoration: none;
     /* margin: auto; */
@@ -27,8 +27,10 @@ button{
     align-items: stretch;
     
     /* align-self: center; */
-    width: min(90%, 500px);
+    width: min(90%, 600px);
     height: auto;
+
+
     border: 1px solid white;
     border-radius: 10%;
     background-color: salmon;
@@ -56,14 +58,14 @@ button{
         gap: 5px;
         justify-content: space-evenly;
         align-items: stretch;
-        flex: 1 1 auto;
+        flex: 1 100%;
     }
         #functions{
             display: flex;
             flex-wrap: nowrap;
             justify-content: center;
             flex: 1;
-            padding: 1rem;
+            padding: 1em;
         }
             .function{
                 flex: 1;
@@ -71,18 +73,48 @@ button{
 
         #numOpContainer{
             display: flex;
+            
             flex: 1;
-            padding: 1rem;
+            padding: 1em;
         }
             #numbers{
-                display: flex;
-                flex-direction: column;
                 flex: 3;
-            }
+                width: 75%;
+                aspect-ratio: 3/4;
 
-            #operators{
                 display: flex;
                 flex-direction: column;
-                flex: 1;
+
             }
+            #numbers > div {
+                flex:1;
+                width: 25%;
+
+                display: flex;
+                flex-wrap: nowrap;
+                /* justify-content: center; */
+            }
+                .number{
+                    flex: 1;
+                }
+
+                div#fourthRow{
+                    /* flex:none; */
+                }
+
+                    #fourthRow > .number{
+                        flex-grow: 3;
+                        aspect-ratio: 2/1;
+                    }
+                    #fourthRow > #point{
+                        flex-grow: 1;
+                        aspect-ratio: 1;
+                    }
+
+        #operators{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            width: 25%;
+        }
     
