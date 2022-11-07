@@ -30,7 +30,7 @@ button{
     width: min(90%, 600px);
     height: auto;
 
-
+    padding: 1rem;
     border: 1px solid white;
     border-radius: 10%;
     background-color: salmon;
@@ -42,7 +42,7 @@ button{
         align-self: center;
         
     }
-        #display{
+        #displayValue{
             font-size: 50pt;
             text-align: right;
             color: azure;
@@ -59,15 +59,16 @@ button{
         justify-content: space-evenly;
         align-items: stretch;
         flex: 1 100%;
+        margin: 1rem;
     }
-        #functions{
+        #operators{
             display: flex;
             flex-wrap: nowrap;
             justify-content: center;
             flex: 1;
             padding: 1em;
         }
-            .function{
+            .operator{
                 flex: 1;
             }
 
@@ -76,6 +77,7 @@ button{
             
             flex: 1;
             padding: 1em;
+
         }
             #numbers{
                 flex: 3;
@@ -105,13 +107,14 @@ button{
                     #fourthRow > .number{
                         flex-grow: 3;
                         aspect-ratio: 2/1;
+                        border-radius: 15%;
                     }
                     #fourthRow > #point{
                         flex-grow: 1;
                         aspect-ratio: 1;
                     }
 
-        #operators{
+        #resultButtons{
             display: flex;
             flex-direction: column;
             flex: 1;
