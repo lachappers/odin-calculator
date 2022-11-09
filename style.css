@@ -1,15 +1,17 @@
 body {
     background-color: aquamarine;
-    height: 100vh;
+    height: 90vh;
+    min-width: 350px;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
+    
     margin: auto;
 }
 
 button{
-    font-size: 24px;
+    font-size: 1.5rem;
     padding: 1rem;
     text-align: center;
     text-decoration: none;
@@ -24,100 +26,123 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
-    
-    /* align-self: center; */
-    width: min(90%, 600px);
-    height: auto;
-
-    padding: 1rem;
+    /* align-items: stretch; */
+    width: min(60%, 600px);
+    min-height: 65%;
+    padding: 2em;
     border: 1px solid white;
     border-radius: 10%;
     background-color: salmon;
+    gap: 1rem;
 
 }
     #screenContainer{
-        padding: 2em;
-        width: 75%;
+        min-height: 25%;
+        width: 80%;
+        min-width: 0;
+        flex: 1 1 auto;
         align-self: center;
-        
-    }
-        #displayValue{
-            font-size: 50pt;
-            text-align: right;
-            color: azure;
+        /* margin: 1rem; */
+
+        display: flex;
+        align-items: center;
+
             background-color: black;
             border: 3px solid gray;
             border-radius: 5%;
-            padding: 1rem;
+        
+    }
+        #displayValue{
+            /* min-width: 0; */
+            /* min-height: 90%; */
+            /* width: 100%; */
+            padding-right: 1rem;
+            flex: 1 1 auto;
+            font-size: 300%;
+            text-align: right;
+            color: azure;
+
         }
 
     #keypad{
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        /* gap: 5px; */
+        padding: 1rem;
         justify-content: space-evenly;
         align-items: stretch;
-        flex: 1 100%;
-        margin: 1rem;
+        min-height: 0; 
+        flex: 3 0 auto;
     }
         #operators{
+            min-width: 0;
+            width: 100%;
+            flex: 1 0 auto;
             display: flex;
             flex-wrap: nowrap;
             justify-content: center;
-            flex: 1;
-            padding: 1em;
+
+            /* padding: 1em; */
+            
         }
             .operator{
-                flex: 1;
+                flex: 1 1 auto;
             }
 
         #numOpContainer{
+            min-width: 0;
+            width: 100%;
+            flex: 1 0 auto;
+
             display: flex;
-            
-            flex: 1;
-            padding: 1em;
+            /* padding: 1em; */
 
         }
             #numbers{
-                flex: 3;
+
+                min-width: 0;
                 width: 75%;
-                aspect-ratio: 3/4;
+                flex: 1 0 auto;
+                /* flex: 3 1 auto; */
+                /* aspect-ratio: 3/4; */
 
                 display: flex;
                 flex-direction: column;
 
             }
             #numbers > div {
-                flex:1;
-                width: 25%;
+                height: 25%;
 
+                flex: 1 0 auto;
                 display: flex;
                 flex-wrap: nowrap;
-                /* justify-content: center; */
             }
                 .number{
-                    flex: 1;
-                }
-
-                div#fourthRow{
-                    /* flex:none; */
+                    min-width: 0;
+                    flex: 1 1 auto;
                 }
 
                     #fourthRow > .number{
-                        flex-grow: 3;
-                        aspect-ratio: 2/1;
+                        /* flex: 3 0 66%; */
+                        min-height: 66.66%;
+                        flex: 1 0 auto;
+                        /* aspect-ratio: 2/1; */
                         border-radius: 15%;
                     }
                     #fourthRow > #point{
-                        flex-grow: 1;
-                        aspect-ratio: 1;
+
+                        min-height: 33.33%;
+                        flex: 1 0 auto;
+                        /* aspect-ratio: 1; */
+
                     }
 
         #resultButtons{
+            min-width: 0;
             display: flex;
             flex-direction: column;
-            flex: 1;
             width: 25%;
+            flex: 1 0 auto;
+            
         }
     

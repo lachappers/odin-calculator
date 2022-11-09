@@ -1,23 +1,54 @@
-const displayValue = document.querySelector('#displayValue');
+        const displayValue = document.querySelector('#displayValue');
         displayValue.textContent = '0000000';
 
 let memoryValue = 0;
-let a=0;
-let b=0;
+let a=3;
+let b=4;
 let operatorText;
 
-const operate = (operator,a,b) =>{
-    return result = `${a}${operator}${b}`
-}
+// const numberButtons = document.querySelectorAll('.number');
+// const equalButton = document.querySelector('#equals');
+// const clearButton = document.querySelector('#clear');
+// const operatorButtons = document.querySelectorAll('.operator');
 
-const operators = document.querySelectorAll('.operator');
-    operators.forEach((operator) => {
-        operator.addEventListener('click', () => {
-            operatorText = (operator.innerHTML);
-            console.log(operatorText);
-        })
-    });
 
+//     operatorButtons.forEach((operator) => {
+//         operator.addEventListener('click', () => {
+//             return operatorText = (operator.innerHTML);
+//             // console.log(operatorText);
+//         });
+//     });
+
+// const onEquals = 
+    
+//     const operate = (operatorText,a,b) => {`${a}${operatorText}${b}`};
+
+
+
+//const operate = (operatorText,a,b) => {`${a}${operatorText}${b}`};
+
+// const operators = document.querySelectorAll('.operator');
+//     operators.forEach((operator) => {
+//         operator.addEventListener('click', () => {
+//             operatorText = (operator.innerHTML);
+//             console.log(operatorText);
+
+//         });
+//         //return operatorText;
+//         console.log(operate(operatorText,3,2));
+//     });
+
+
+
+
+
+
+    // const operate = (operatorText,a,b) => {`${a}${operatorText}${b}`};
+    // (operatorText,3,2) => {`${a}${operatorText}${b}`};
+
+    // const operate = (operatorText,a,b) =>{
+    //     return result = `${a}${operatorText}${b}`
+    // }
 
 // const add = (a, b) => a + b;
 
