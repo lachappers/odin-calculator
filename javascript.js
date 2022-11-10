@@ -1,18 +1,103 @@
-const displayValue = document.querySelector('#displayValue');
-const numberButtons = document.querySelectorAll('.number');
-const equalButton = document.querySelector('#equals');
-const clearButton = document.querySelector('#clear');
-const operatorButtons = document.querySelectorAll('.operator');
-
-let memoryValue;
-let a=3;
-let b=4;
+const resetValue = '0000000';
+let memoryValue = "";
+// let calculator;
+let a = ''; // previous operand
+let b = ''; // current operand
 let operatorText;
-displayValue.textContent = resetValue = '0000000';
+let result;
+
+
+const display = document.querySelector('#displayValue');
+const numberButtons = document.querySelectorAll('.number');
+const operatorButtons = document.querySelectorAll('.operator');
+const equalButton = document.querySelector('#equals');
+const allClearButton = document.querySelector('#allClear');
+const clearEntryButton = document.querySelector('#clearEntry')
+// const pointButton = document.querySelector('#point');
+
+const add = (a, b) => a + b;
+const subtract = (a,b) => a-b;
+const multiply = (a,b) => a*b;
+const divide = (a,b) => a/b;
+
+
+display.textContent = resetValue;
+let displayValue = display.textContent;
+
+
+equalButton.addEventListener('click', operate);
+allClearButton.addEventListener('click', allClear);
+clearEntryButton.addEventListener('click', clearDisplayValues);
+// pointButton.addEventListener('click', appendPoint, once);
+
+numberButtons.forEach((button) =>
+    button.addEventListener('click', () => appendNumber(button.innerText))
+    );
+
+operatorButtons.forEach((button) =>
+    button.addEventListener('click', () => setOperation(button.innerText))
+    );
+
+function allClear() { // reset everything
+    memoryValue = "";
+    display.textContent = resetValue; 
+    a = 0;
+    b = 0;
+    operatorText = "";
+    };
+    
+function setOperation(operatorText){   
+    if(a == ''){
+        a = Number(memoryValue)
+        memoryValue = '';
+        display.textContent = operatorText; // change to bold instead of display?
+    }
+    else{
+        b = Number(memoryValue)
+        operate(a,b,operatorText);
+    };
+    console.log(a,b, operatorText);
+}
+
+function appendNumber(number){
+    if (display.textContent === resetValue && a === ""){
+        clearDisplayValues()};
+        memoryValue += number;
+        display.textContent = memoryValue;
+        console.log(memoryValue);
+    // }
+    };
+
+function clearDisplayValues(){
+    display.textContent = resetValue;
+    // operatorText = '';
+    memoryValue = '';
+    };
+
+function operate(a,b,operatorText){
+    if(b === ''){b = Number(memoryValue)};
+    if(operatorText === "+"){
+        result = add(a,b)
+    }
+    else if(operatorText === "-") {
+        result = subtract(a,b)
+    }
+    else if(operatorText ==="÷"){
+        result = divide (a,b)
+    }
+    else if(operatorText ==="x"){
+        result = multiply (a,b)
+    }
+    // return result;
+    console.log(result);
+}
 
 
 
-const clear = () => { displayValue = resetValue; memoryValue = ""; }
+// let compute = (a, operatorText, b) => { // invoke function between operands and return result
+//    result = a + operatorText + b;
+
+// }
 
 
 //     operatorButtons.forEach((operator) => {
@@ -53,13 +138,7 @@ const clear = () => { displayValue = resetValue; memoryValue = ""; }
     //     return result = `${a}${operatorText}${b}`
     // }
 
-// const add = (a, b) => a + b;
 
-// const subtract = (a,b) => a-b;
-
-// const multiply = (a,b) => a*b;
-
-// const divide = (a,b) => a/b;
 
 
 // /*

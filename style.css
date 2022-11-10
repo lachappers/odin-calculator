@@ -1,5 +1,8 @@
 body {
     background-color: aquamarine;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
     height: 90vh;
     min-width: 350px;
     display: flex;
@@ -55,7 +58,8 @@ button{
             padding-right: 1rem;
 
             flex: 1 1 auto;
-            font-size: 2rem;
+            font-size: 3rem;
+
             text-align: right;
             color: azure;
 
@@ -128,14 +132,21 @@ button{
         #resultButtons{
             min-width: 0;
             width: 25%;
-
             display: flex;
             flex-wrap: wrap;
+            
             align-items: stretch;
             flex: 1 1 auto;
             
         }
 
         #resultButtons > button{
+
+            height: 25%;
+        }
+        #resultButtons > #equals{
             border-radius: 15%;
+            height:50%;
+            background-color: rgba(110, 100, 242, 0.781);
+            color: aliceblue;
         }
