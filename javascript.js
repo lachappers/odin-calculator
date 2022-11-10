@@ -1,15 +1,18 @@
-        const displayValue = document.querySelector('#displayValue');
-        displayValue.textContent = '0000000';
+const displayValue = document.querySelector('#displayValue');
+const numberButtons = document.querySelectorAll('.number');
+const equalButton = document.querySelector('#equals');
+const clearButton = document.querySelector('#clear');
+const operatorButtons = document.querySelectorAll('.operator');
 
-let memoryValue = 0;
+let memoryValue;
 let a=3;
 let b=4;
 let operatorText;
+displayValue.textContent = resetValue = '0000000';
 
-// const numberButtons = document.querySelectorAll('.number');
-// const equalButton = document.querySelector('#equals');
-// const clearButton = document.querySelector('#clear');
-// const operatorButtons = document.querySelectorAll('.operator');
+
+
+const clear = () => { displayValue = resetValue; memoryValue = ""; }
 
 
 //     operatorButtons.forEach((operator) => {
